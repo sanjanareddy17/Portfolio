@@ -6,12 +6,7 @@ const Experience = ({ data }) => {
 
     return (
         <section id="experience" style={{ maxWidth: '700px' }}>
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-            >
+            <div>
                 <h2 className="section-title">Where I've Worked</h2>
 
                 <div style={{ display: 'flex', flexDirection: 'row', gap: '2rem' }}>
@@ -37,7 +32,6 @@ const Experience = ({ data }) => {
                                         padding: '0 20px',
                                         height: '42px',
                                         textAlign: 'left',
-                                        borderLeft: '2px solid var(--bg-tertiary)',
                                         backgroundColor: activeTab === index ? 'rgba(17, 34, 64, 0.5)' : 'transparent',
                                         color: activeTab === index ? 'var(--accent)' : 'var(--text-secondary)',
                                         fontFamily: 'var(--font-mono)',
@@ -45,7 +39,6 @@ const Experience = ({ data }) => {
                                         width: '140px',
                                         transition: 'var(--transition)',
                                         border: 'none',
-                                        // borderLeft is handled by the indicator div actually, but let's keep it consistent with the intent
                                         borderLeft: `2px solid ${activeTab === index ? 'transparent' : 'var(--bg-tertiary)'}`
                                     }}
                                 >
@@ -73,7 +66,7 @@ const Experience = ({ data }) => {
                         </ul>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 };

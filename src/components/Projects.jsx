@@ -4,12 +4,7 @@ import { Folder, ExternalLink, Github } from 'lucide-react';
 const Projects = ({ data }) => {
     return (
         <section id="projects">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-            >
+            <div>
                 <h2 className="section-title">Some Things I've Built</h2>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '15px' }}>
@@ -57,7 +52,7 @@ const Projects = ({ data }) => {
                         </motion.div>
                     ))}
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 };

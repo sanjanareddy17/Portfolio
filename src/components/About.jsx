@@ -3,12 +3,7 @@ import { motion } from 'framer-motion';
 const About = ({ data }) => {
     return (
         <section id="about">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-            >
+            <div>
                 <h2 className="section-title">About Me</h2>
 
                 <div style={{ maxWidth: '800px' }}>
@@ -39,7 +34,7 @@ const About = ({ data }) => {
                         </ul>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 };
