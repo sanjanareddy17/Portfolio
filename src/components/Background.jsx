@@ -95,7 +95,7 @@ const Background = () => {
                 left: 0,
                 width: '100%',
                 height: '100%',
-                zIndex: 0,
+                zIndex: -1,
                 pointerEvents: 'none',
                 background: 'linear-gradient(to bottom, #0a192f, #112240)'
             }}

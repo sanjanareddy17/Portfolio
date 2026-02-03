@@ -17,8 +17,14 @@
   padding: 0;
 }
 
-body {
+html {
   background-color: var(--bg-primary);
+  /* Fallback */
+}
+
+body {
+  background-color: transparent;
+  /* Let canvas show through */
   color: var(--text-primary);
   font-family: var(--font-sans);
   line-height: 1.6;
@@ -28,6 +34,7 @@ body {
 #root {
   position: relative;
   z-index: 1;
+  /* Establish stacking context */
 }
 
 a {
