@@ -1,70 +1,83 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Experience = ({ data }) => {
-    const [activeTab, setActiveTab] = useState(0);
-
     return (
-        <section id="experience" style={{ maxWidth: '700px' }}>
+        <section id="experience" style={{ maxWidth: '900px' }}>
             <div>
-                <h2 className="section-title">Where I've Worked</h2>
+                <h2 className="section-title">Client Projects & Experience</h2>
 
-                <div style={{ display: 'flex', flexDirection: 'row', gap: '2rem' }}>
-                    {/* Tabs */}
-                    <div style={{ position: 'relative' }}>
-                        <div
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+                    {data.map((job, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
                             style={{
-                                position: 'absolute',
-                                top: activeTab * 42,
-                                left: 0,
-                                width: '2px',
-                                height: '42px',
-                                backgroundColor: 'var(--accent)',
+                                backgroundColor: 'var(--bg-secondary)',
+                                padding: '2rem',
+                                borderRadius: '4px',
+                                borderLeft: '3px solid var(--accent)',
                                 transition: 'var(--transition)'
                             }}
-                        />
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            {data.map((job, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => setActiveTab(index)}
-                                    style={{
-                                        padding: '0 20px',
-                                        height: '42px',
-                                        textAlign: 'left',
-                                        backgroundColor: activeTab === index ? 'rgba(17, 34, 64, 0.5)' : 'transparent',
-                                        color: activeTab === index ? 'var(--accent)' : 'var(--text-secondary)',
+                        >
+                            {/* Header */}
+                            <div style={{ marginBottom: '1.5rem' }}>
+                                <h3 style={{ fontSize: '24px', fontWeight: 500, marginBottom: '8px' }}>
+                                    {job.role} <span className="highlight">@ {job.company}</span>
+                                </h3>
+                                <div style={{
+                                    display: 'flex',
+                                    gap: '1rem',
+                                    alignItems: 'center',
+                                    flexWrap: 'wrap'
+                                }}>
+                                    <p style={{
                                         fontFamily: 'var(--font-mono)',
                                         fontSize: '13px',
-                                        width: '140px',
-                                        transition: 'var(--transition)',
-                                        border: 'none',
-                                        borderLeft: `2px solid ${activeTab === index ? 'transparent' : 'var(--bg-tertiary)'}`
-                                    }}
-                                >
-                                    {job.company}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
+                                        color: 'var(--accent)',
+                                        margin: 0
+                                    }}>
+                                        {job.period}
+                                    </p>
+                                    <span style={{ color: 'var(--text-secondary)' }}>•</span>
+                                    <p style={{
+                                        fontSize: '14px',
+                                        color: 'var(--text-secondary)',
+                                        fontStyle: 'italic',
+                                        margin: 0
+                                    }}>
+                                        {job.description}
+                                    </p>
+                                </div>
+                            </div>
 
-                    {/* Content */}
-                    <div style={{ flex: 1 }}>
-                        <h3 style={{ fontSize: '22px', fontWeight: 500, marginBottom: '5px' }}>
-                            {data[activeTab].role} <span className="highlight">@ {data[activeTab].company}</span>
-                        </h3>
-                        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '25px' }}>
-                            {data[activeTab].period}
-                        </p>
-                        <ul style={{ color: 'var(--text-secondary)' }}>
-                            {data[activeTab].highlights.map((point, index) => (
-                                <li key={index} style={{ marginBottom: '10px', position: 'relative', paddingLeft: '20px', fontSize: '15px' }}>
-                                    <span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>▹</span>
-                                    {point}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                            {/* Highlights */}
+                            <ul style={{ color: 'var(--text-secondary)', margin: 0 }}>
+                                {job.highlights.map((point, pointIndex) => (
+                                    <li
+                                        key={pointIndex}
+                                        style={{
+                                            marginBottom: '12px',
+                                            position: 'relative',
+                                            paddingLeft: '20px',
+                                            fontSize: '15px',
+                                            lineHeight: '1.6'
+                                        }}
+                                    >
+                                        <span style={{
+                                            position: 'absolute',
+                                            left: 0,
+                                            color: 'var(--accent)',
+                                            fontWeight: 'bold'
+                                        }}>▹</span>
+                                        {point}
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>
