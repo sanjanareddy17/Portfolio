@@ -8,7 +8,7 @@ Built with **React** and **Vite**, featuring smooth animations powered by **Fram
 
 ## 🚀 Live Demo
 <!-- Replace next line with your actual Vercel link once deployed -->
-[View Live Portfolio Here](https://your-vercel-link-here.vercel.app)
+[View Live Portfolio Here]([https://your-vercel-link-here.vercel.app](https://portfolio-sanjanareddy.vercel.app/))
 
 ## 🛠️ Tech Stack
 - **Framework:** React + Vite
