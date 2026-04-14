@@ -23,7 +23,7 @@ const Hero = ({ data }) => {
             </h2>
 
             <p style={{ maxWidth: '540px', fontSize: '18px', color: 'var(--text-secondary)', marginBottom: '50px' }}>
-                I am a data engineer specializing in building scalable ETL pipelines and cloud-based analytics solutions. Currently, I'm focused on delivering data warehousing solutions for enterprise clients at <span style={{ color: 'var(--accent)' }}>MetLife</span>.
+                {data.role} specializing in designing, developing, and optimizing scalable data pipelines and cloud architectures. Currently, I'm focused on engineering end-to-end data workflows at <span style={{ color: 'var(--accent)' }}>CVS Pharmacy</span>.
             </p>
 
             <div>

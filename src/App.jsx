@@ -4,6 +4,7 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Education from './components/Education';
 import Contact from './components/Contact';
 import Background from './components/Background';
 import { resumeData } from './data';
@@ -20,6 +21,7 @@ function App() {
         <Experience data={resumeData.experience} />
         <Projects data={resumeData.projects} />
         <Skills data={resumeData.skills} />
+        <Education education={resumeData.education} certifications={resumeData.certifications} />
         <Contact data={resumeData.personal} />
       </div>
 

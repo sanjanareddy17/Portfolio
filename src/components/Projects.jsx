@@ -145,10 +145,18 @@ const Projects = ({ data }) => {
                                                                     color: 'var(--accent)',
                                                                     fontWeight: 'bold'
                                                                 }}>▹</span>
-                                                                <strong style={{ color: 'var(--text-primary)' }}>
-                                                                    {detail.split(':')[0]}:
-                                                                </strong>
-                                                                {detail.substring(detail.indexOf(':') + 1)}
+                                                                {detail.includes(':') ? (
+                                                                    <>
+                                                                        <strong style={{ color: 'var(--text-primary)' }}>
+                                                                            {detail.split(':')[0]}:
+                                                                        </strong>
+                                                                        {detail.substring(detail.indexOf(':') + 1)}
+                                                                    </>
+                                                                ) : (
+                                                                    <span style={{ color: 'var(--text-secondary)' }}>
+                                                                        {detail}
+                                                                    </span>
+                                                                )}
                                                             </li>
                                                         ))}
                                                     </ul>
