@@ -4,7 +4,7 @@ export const resumeData = {
     role: "Data Engineer",
     email: "sanjanachreddy99@gmail.com",
     phone: "(708) 303-8486",
-    linkedin: "www.linkedin.com/in/sanjana-reddy-dataengineer",
+    linkedin: "www.linkedin.com/in/sreddy9917077",
     summary: "Data Engineer with 3+ years of experience designing, developing, and optimizing scalable solutions. Microsoft Azure Associate Developer certified professional with hands-on expertise in designing and implementing data pipelines, ETL processes, and cloud-based data solutions. Experienced in working with enterprise clients including PWC, Rocket Mortgage to deliver data warehousing and analytics solutions. Skilled in AWS and Azure cloud platforms, big data technologies, SQL, Python, and data modeling. Strong problem-solving abilities with focus on delivering quality data solutions that support business decision-making.",
     location: "United States"
   },
