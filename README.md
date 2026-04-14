@@ -1,16 +1,65 @@
-# React + Vite
+# Sanjana Reddy - Data Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and dynamic personal portfolio website designed to showcase projects, experience, and skills in Data Engineering and Cloud Architecture. 
 
-Currently, two official plugins are available:
+Built with **React** and **Vite**, featuring smooth animations powered by **Framer Motion**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
+<!-- Replace next line with your actual Vercel link once deployed -->
+[View Live Portfolio Here](https://your-vercel-link-here.vercel.app)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
+- **Framework:** React + Vite
+- **Styling:** Vanilla CSS (App.css & index.css)
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
 
-## Expanding the ESLint configuration
+## 💡 Key Features
+- **Centralized Data:** All personal information (experience, projects, skills, education) is pulled dynamically from a core `src/data.js` file, making it incredibly simple to update the portfolio as your career progresses.
+- **Scroll Animations:** Interacting elements elegantly fade into view via Framer Motion's viewport detection.
+- **Component Based Architecture:** Modular code separated intelligently (`Hero.jsx`, `Projects.jsx`, `Experience.jsx`, `Education.jsx`).
+- **Responsive Navigation:** Interactive sticky header tracking page segments.
+- **Micro-interactions:** Custom backgrounds, cursor tracking logic, and subtle hover effects to increase user engagement.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💻 Running the Project Locally
+
+To test or view the application locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/sanjanareddy17/portfolio.git
+   ```
+
+2. **Navigate to the project directory:**
+   ```bash
+   cd portfolio
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Start the local development server:**
+   ```bash
+   npm run dev
+   ```
+5. Open your browser and visit `http://localhost:5173/`
+
+
+## 📁 Updating Content
+Need to update your resume, add a certification, or append a new project?
+Simply open `src/data.js` and modify the JSON objects! The components will automatically adapt, structure, and render the new changes without any extra architectural hassle. 
+
+## ☁️ Deployment Strategy
+This static site is optimized to be deployed seamlessly with **Vercel**:
+
+1. Log into [Vercel](https://vercel.com/) and link your GitHub account.
+2. Select **"Import Project"** and choose this repository.
+3. Vercel will auto-detect Vite. Ensure the output directory is `dist` and build command is `npm run build`.
+4. Click **Deploy**. Changes pushed to the `main` branch will automatically trigger a new deployment.
+
+---
+*Designed and built by Sanjana Reddy.*
